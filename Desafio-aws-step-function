@@ -1,0 +1,184 @@
+# AWS Step Functions: Orquestração de Workflows Serverless
+
+## Sobre o Projeto
+
+Este repositório foi criado como parte do desafio da DIO sobre AWS Step Functions.
+
+O objetivo deste projeto é documentar os conhecimentos adquiridos durante o curso, explorando conceitos fundamentais de orquestração de workflows, automação de processos e integração com serviços AWS.
+
+---
+
+## O que são AWS Step Functions?
+
+AWS Step Functions é um serviço de orquestração serverless que permite criar, executar e monitorar fluxos de trabalho distribuídos.
+
+Com ele é possível coordenar múltiplos serviços AWS, APIs externas e aplicações personalizadas através de uma máquina de estados visual.
+
+Principais benefícios:
+
+* Orquestração de processos complexos
+* Baixa manutenção de infraestrutura
+* Escalabilidade automática
+* Observabilidade e monitoramento
+* Integração nativa com diversos serviços AWS
+
+---
+
+## Conceitos Aprendidos
+
+### State Machine
+
+Uma State Machine representa o fluxo completo de execução de um processo.
+
+Exemplo:
+
+Início → Processamento → Decisão → Finalização
+
+Cada etapa é representada por um estado.
+
+---
+
+### Estados (States)
+
+Durante o curso foram apresentados diversos tipos de estados:
+
+#### Task
+
+Executa uma ação específica.
+
+Exemplos:
+
+* Chamar uma função Lambda
+* Consultar um banco de dados
+* Invocar um modelo de IA
+
+#### Choice
+
+Permite criar decisões dentro do fluxo.
+
+Exemplo:
+
+* Cliente respondeu?
+
+  * Sim → Continuar
+  * Não → Encerrar
+
+#### Wait
+
+Adiciona um tempo de espera antes da próxima etapa.
+
+Exemplo:
+
+* Aguardar 24 horas para realizar um follow-up.
+
+#### Parallel
+
+Executa múltiplas tarefas simultaneamente.
+
+Exemplo:
+
+* Consultar CRM
+* Consultar Base de Conhecimento
+* Consultar Histórico
+
+Tudo ao mesmo tempo.
+
+#### Succeed
+
+Indica sucesso na execução.
+
+#### Fail
+
+Indica falha na execução.
+
+---
+
+### Amazon States Language (ASL)
+
+AWS Step Functions utiliza uma linguagem baseada em JSON chamada Amazon States Language (ASL).
+
+Ela é utilizada para definir toda a lógica da máquina de estados.
+
+Exemplo simplificado:
+
+```json
+{
+  "StartAt": "ProcessarPedido",
+  "States": {
+    "ProcessarPedido": {
+      "Type": "Task",
+      "End": true
+    }
+  }
+}
+```
+
+---
+
+### Workflow Studio
+
+Workflow Studio é a ferramenta visual da AWS para criação de workflows.
+
+Principais vantagens:
+
+* Desenvolvimento visual
+* Menor curva de aprendizado
+* Facilidade para modelar processos
+* Geração automática do código ASL
+
+---
+
+## Integração com IA Generativa
+
+Um dos tópicos mais interessantes estudados foi a integração entre AWS Step Functions e Amazon Bedrock.
+
+Com essa combinação é possível criar aplicações baseadas em IA generativa utilizando uma arquitetura totalmente serverless.
+
+Fluxo exemplo:
+
+Usuário → Step Functions → Amazon Bedrock → Resposta → Usuário
+
+---
+
+## Possíveis Aplicações Futuras
+
+Durante o curso, identifiquei oportunidades para utilizar Step Functions em projetos de automação comercial e agentes de IA.
+
+Exemplo de fluxo para um SDR Inteligente:
+
+Lead Criado
+↓
+Buscar Contexto
+↓
+Buscar Histórico
+↓
+Consultar CRM
+↓
+Gerar Estratégia
+↓
+Enviar Mensagem
+↓
+Atualizar Pipeline
+
+Esse tipo de arquitetura permite criar agentes mais escaláveis e organizados.
+
+---
+
+##  Conclusão
+
+AWS Step Functions é uma ferramenta poderosa para orquestração de processos distribuídos e aplicações serverless.
+
+Além de simplificar a integração entre serviços, permite criar fluxos complexos de forma visual através do Workflow Studio e de forma programática utilizando Amazon States Language (ASL).
+
+O conhecimento adquirido neste desafio abre caminho para a construção de soluções modernas envolvendo automação, inteligência artificial e computação em nuvem.
+
+---
+
+##  Referências
+
+* AWS Step Functions
+* Workflow Studio
+* Amazon States Language (ASL)
+* Amazon Bedrock
+* Arquiteturas Serverless
+* AWS Lambda
