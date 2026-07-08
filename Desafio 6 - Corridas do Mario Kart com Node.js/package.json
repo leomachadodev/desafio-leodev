@@ -1,0 +1,17 @@
+{
+  "name": "desafio-6-corridas-mario-kart",
+  "version": "1.0.0",
+  "description": "Simulador de corrida inspirado em Mario Kart desenvolvido durante a Formação Node.js da DIO.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "mario-kart",
+    "dio"
+  ],
+  "author": "Leonardo Machado",
+  "license": "ISC"
+}
