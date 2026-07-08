@@ -1,0 +1,12 @@
+{
+  "name": "desafio-7-shopee-cart",
+  "version": "1.0.0",
+  "description": "Carrinho de compras Shopee",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "author": "Leonardo Machado",
+  "license": "ISC"
+}
